@@ -26,7 +26,7 @@ You'll need the following development tools:
 ### Build and Run
 #### Get the source
 ```
-https://github.com/seanperera/matlab.git
+https://github.com/seanperera/MatLAB.git
 ```
 #### Run
 - Open solution matlab.sln with Visul Studio 2019 or Visual Studio Code
