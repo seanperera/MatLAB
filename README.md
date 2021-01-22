@@ -1,7 +1,7 @@
 # MatLAB: Modern Engineering Challenge :bicyclist:
 
 MatLab is a cloud app :globe_with_meridians: that enables you to do basic mathematic calculations. 
-The app :package: is developed to demonstrate modern engineering practices.
+The app is developed to demonstrate modern engineering practices.
 
 ## The Challenge
 Develop a basic backend application that’s easy to consume in a web or mobile application. Develop an application that provides functionality to add, subtract and multiply numbers and ensure correct functioning of these through automated (unit) testing. 
