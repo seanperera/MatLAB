@@ -4,7 +4,7 @@ MatLab is a cloud app :globe_with_meridians: that enables you to do basic mathem
 The app is developed to demonstrate modern engineering practices.
 
 ## The Challenge
-The challenge requires you to demonstrate your experience in coding, tooling and some best practices in modern systems engineering. During the challenge you develop a basic backend application (API) and deploy this into a real environment using DevOps practices. Furthermore, you’ll need to provide some insights into your software development process using (dash)boards and reporting. 
+The challenge requires you to demonstrate your experience in coding, tooling and some best practices in modern systems engineering. During the challenge you develop a basic backend application (API) and deploy this into a real environment using DevOps practices. Furthermore, you’ll need to provide some insights into your software development process using  Dashboards and reporting. 
 
 ## Build Status
 You can take a look at a live running website following this address: https://matlab.azurewebsites.net
