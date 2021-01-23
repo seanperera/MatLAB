@@ -21,7 +21,7 @@ steps:
     Destination: 'AzureBlob'
     storage: 'iacst'
     ContainerName: 'matlab-arm'
-    name: AzureFileCopy
+  name: AzureFileCopy
   
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
@@ -35,4 +35,4 @@ steps:
     csmFileLink: '$(AzureFileCopy.StorageContainerUri)ARM/azuredeploy.json$(AzureFileCopy.StorageContainerSasToken)'
     # csmParametersFileLink: '$(AzureFileCopy.StorageContainerUri)templates/azuredeploy.parameters.json$(AzureFileCopy.StorageContainerSasToken)'
     deploymentMode: 'Incremental'
-    deploymentName: 'Deploy Azure Resources'
+    deploymentName: 'DeployAzureResources'
