@@ -13,7 +13,7 @@ steps:
 - task: AzureFileCopy@4
   inputs:
     SourcePath: 'Deploy/ARM'
-    azureSubscription: 'copy-connection'
+    azureSubscription: 'VSP'
     Destination: 'AzureBlob'
     storage: 'iacst'
     ContainerName: 'matlab-arm'
