@@ -9,6 +9,10 @@ trigger:
 pool:
   vmImage: 'windows-latest'
 
+variables:
+    # Deployment location
+    location: 'Australia Southeast'
+
 steps:
 - task: AzureFileCopy@4
   inputs:
@@ -17,4 +21,18 @@ steps:
     Destination: 'AzureBlob'
     storage: 'iacst'
     ContainerName: 'matlab-arm'
-  name: AzureFileCopy
+    name: AzureFileCopy
+  
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'AzureMatLabService'
+    subscriptionId: '0c8000e1-12cf-401c-8dd3-edd66e308ed8'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'matlab-rg'
+    location: $(location)
+    templateLocation: 'URL of the file'
+    csmFileLink: '$(AzureFileCopy.StorageContainerUri)ARM/azuredeploy.json$(AzureFileCopy.StorageContainerSasToken)'
+    # csmParametersFileLink: '$(AzureFileCopy.StorageContainerUri)templates/azuredeploy.parameters.json$(AzureFileCopy.StorageContainerSasToken)'
+    deploymentMode: 'Incremental'
+    deploymentName: 'Deploy Azure Resources'
